@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Animaciones en <span class="blue">CSS</span></h1>
+        </section>
+        <section>
+          <h2>Tabla de Contendio</h2>
+          <ul>
+            <li>¿Qué es? Y ¿Para qué sirven?</li>
+            <li>Timing Functions</li>
+            <li>transition property</li>
+            <li>animation property</li>
+            <li>@keyframes</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h2>¿Qué es?</h2>
+            <p>
+              Es un cambio de los estilos de los elementos del DOM (Document
+              Object Model).
+            </p>
+          </section>
+          <section>
+            <h2>¿Para qué sirven?</h2>
+            <p>Dar dinamismo a los website o webapps para una mejor UI/UX.</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Timing Functions</h2>
+            <p>
+              Es una funcion (matemática) que especifica la velocidad de una
+              animación o transición
+            </p>
+            <img
+              src="https://i.stack.imgur.com/qyvON.png"
+              alt="Timing Functions"
+            />
+          </section>
+          <section>
+            <h3>
+              <a href="https://cubic-bezier.com/#.17,.67,.83,.67">
+                Cubic Bezier
+              </a>
+            </h3>
+            <p>
+              Es una tecnica de dibujo técnico donde se utilizan formulas
+              matemáticas, dentro de CSS tenemos la función
+            </p>
+            <pre>
+                <code>
+                  cubic-bezier(x1, y1, x2, y2)
+                </code>
+              </pre>
+            <p>que recibe los punto de la curva con valores entre 0 y 1</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>transition property</h2>
+            <p>Es una shorthand para poder usar transitiones en CSS</p>
+          </section>
+          <section>
+            <ul>
+              <li>transition-property: propiedad que aplica la transición</li>
+              <li>transition-delay: retraso de la transición</li>
+              <li>transition-duration: duración de la transición</li>
+              <li>
+                transition-timing-function: timing function de la transición
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>animation property</h2>
+            <p>Es una shorthand para poder usar animaciones en CSS</p>
+          </section>
+          <section>
+            <ul>
+              <li>animation-name: nombre de la animación</li>
+              <li>animation-duration: duración de la animación</li>
+              <li>
+                animation-timing-function: <strong>timing function</strong> de
+                la animación
+              </li>
+              <li>animation-delay: retraso de la animación</li>
+              <li>
+                animation-iteration-count: veces que se repite la animación
+              </li>
+              <li>
+                animation-direction: la dirección en la que sucede la animación
+              </li>
+              <li>
+                animation-fill-mode: modo en el que se queda el elemento luego
+                de la animación
+              </li>
+              <li>animation-play-state: estado de la animación</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>@keyframes</h2>
+            <p>Son los fotogramas de referencia de una animación</p>
+            <pre><code>
+              @keyframes identifier {
+                [ from | to | percentage ] [, from | to | percentage ]* block ]*
+              }
+            </code></pre>
+          </section>
+          <section>
+            <h3>Ejemplo</h3>
+            <pre><code>
+              @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {
+                  transform: translateY(0);
+                } 
+                40% {
+                  transform: translateY(-30px);
+                } 
+                60% {
+                  transform: translateY(-15px);
+                } 
+              }
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <h2>Bibliografia</h2>
+          <ul>
+            <li>
+              <a href="https://www.w3.org/TR/web-animations-1/"
+                >Web Animations</a
+              >
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/es/docs/Web/CSS/animation"
+                >Animation Property | MDN</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition"
+                >Transition Property | MDN</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

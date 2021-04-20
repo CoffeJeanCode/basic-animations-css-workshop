@@ -1,0 +1,5 @@
+.blue {
+  background: -webkit-linear-gradient(rgb(41, 144, 228), rgb(44, 194, 181));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
